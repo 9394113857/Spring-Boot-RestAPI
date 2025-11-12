@@ -1,16 +1,25 @@
-git commit -m "Feature: Project Structure - Base Directories and Python Modules
+git commit -m "Feature: Spring Boot + Angular CRUD Project Setup and Integration
 
-1. **Created base directories in the project root**:
-   - Organized directories for different Python-related works.
-   - Each directory represents a distinct area of functionality or experimentation.
+1. **Initialized Spring Boot backend**:
+   - Configured MySQL datasource and JPA properties.
+   - Created User entity and JPA repository for database interaction.
+   - Implemented CRUD operations in UserController with REST endpoints.
 
-2. **Added initial subfolders and Python files**:
-   - Established foundational subfolders within each main directory.
-   - Included placeholder or starter Python files to outline expected structure.
+2. **Integrated Angular frontend**:
+   - Connected Angular services with backend REST APIs.
+   - Implemented components for listing, creating, updating, and deleting users.
+   - Ensured live data updates with full roundtrip from UI → backend → database.
 
-3. **Prepared for future development**:
-   - This structure will support future additions and modular development.
+3. **Tested end-to-end functionality**:
+   - Verified CRUD operations via Angular UI and observed Hibernate SQL logs.
+   - Confirmed MySQL database tables updated correctly on operations.
 
-Note: This setup provides a clean and scalable foundation for organizing Python codebases across different domains.
+4. **Configured CORS and application properties**:
+   - Enabled cross-origin requests for Angular frontend.
+   - Set server port and MySQL credentials in application.properties.
 
-Date: $(Get-Date -Format 'yyyy-MM-dd hh:mm tt')" 
+5. **Prepared for further development and enhancements**:
+   - Project structure ready for adding validations, exception handling, and security features.
+   - Angular components modularized for future extensions.
+
+Date: $(Get-Date -Format 'yyyy-MM-dd hh:mm tt')"
