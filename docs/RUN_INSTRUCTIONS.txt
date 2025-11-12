@@ -1,0 +1,9 @@
+# This command uses Maven to run a Spring Boot application.
+🚀
+# It compiles the project and starts the embedded server, allowing you to test and develop your application locally.
+⚙️
+# Usage: Run this command from the root directory of your Spring Boot project.
+📁
+
+# command:-
+mvn spring-boot:run
