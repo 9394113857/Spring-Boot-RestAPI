@@ -1,9 +1,98 @@
-# This command uses Maven to run a Spring Boot application.
-🚀
-# It compiles the project and starts the embedded server, allowing you to test and develop your application locally.
-⚙️
-# Usage: Run this command from the root directory of your Spring Boot project.
-📁
+# 🚀 RUN_INSTRUCTIONS.txt
 
-# command:-
-mvn spring-boot:run
+This file contains COMPLETE, FINAL STEPS to install Java, set Java environment variables, install Maven, set Maven environment variables, and run your Spring Boot application. Follow everything in order.
+
+============================================================
+1️⃣ INSTALL JAVA (REQUIRED FOR MAVEN & SPRING BOOT)
+============================================================
+
+1. DOWNLOAD JAVA (JDK)
+   - Go to Google and search: "Download Java JDK"
+   - Choose an official provider:
+       • Oracle JDK
+       • Eclipse Temurin (Adoptium)
+       • OpenJDK
+   - Download the latest LTS version (Java 17 or Java 21).
+
+2. INSTALL JAVA
+   - Run the installer normally and complete installation.
+
+3. SET JAVA ENVIRONMENT VARIABLES
+
+   WINDOWS:
+     - Open: System Properties → Advanced → Environment Variables
+     - Add NEW System Variable:
+         Name: JAVA_HOME
+         Value: C:\Program Files\Java\<your-jdk-folder>
+           (Example: C:\Program Files\Java\jdk-21)
+     - Edit "Path" → Add:
+         %JAVA_HOME%\bin
+
+   MACOS / LINUX:
+     Add to ~/.bashrc or ~/.zshrc:
+       export JAVA_HOME=/usr/lib/jvm/<your-jdk-folder>
+       export PATH=$JAVA_HOME/bin:$PATH
+
+4. VERIFY JAVA INSTALLATION
+   - Run:
+       java -version
+   - If it prints a Java version, Java is installed correctly.
+
+============================================================
+2️⃣ INSTALL MAVEN
+============================================================
+
+1. DOWNLOAD MAVEN
+   - Search Google for: "Apache Maven download"
+   - Click the first official Apache Maven site.
+   - Download the "Binary ZIP" (Windows) or "Binary TAR.GZ" (Linux/macOS).
+
+2. EXTRACT MAVEN
+   - Unzip the downloaded file.
+   - Example installation locations:
+       Windows: C:\Program Files\Apache\Maven
+       Linux/macOS: /opt/maven or ~/maven
+
+3. SET MAVEN ENVIRONMENT VARIABLES
+
+   WINDOWS:
+     - Open: System Properties → Advanced → Environment Variables
+     - Add NEW System Variable:
+         Name: MAVEN_HOME
+         Value: C:\Program Files\Apache\Maven\<your-maven-folder>
+           (Example: C:\Program Files\Apache\Maven\apache-maven-3.9.6)
+     - Edit "Path" → Add:
+         %MAVEN_HOME%\bin
+
+   MACOS / LINUX:
+     Add to ~/.bashrc or ~/.zshrc:
+       export MAVEN_HOME=/opt/maven/apache-maven-3.9.6
+       export PATH=$MAVEN_HOME/bin:$PATH
+
+4. VERIFY MAVEN INSTALLATION
+   - Run:
+       mvn -v
+   - If it prints a Maven version, Maven is installed correctly.
+
+============================================================
+3️⃣ RUN YOUR SPRING BOOT APPLICATION
+============================================================
+
+1. Open terminal / cmd and navigate to your project folder (the one with pom.xml).
+
+2. Run the Spring Boot app:
+       mvn spring-boot:run
+
+3. Maven will automatically:
+   - Download dependencies
+   - Compile your project
+   - Start the embedded Spring Boot server
+
+4. Default URL to access your application:
+       http://localhost:8080
+
+============================================================
+🎉 SETUP COMPLETE!
+Java ✔️  Maven ✔️  Spring Boot ✔️  
+You are ready to build and run your application.
+============================================================
